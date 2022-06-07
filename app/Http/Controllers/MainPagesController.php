@@ -34,6 +34,7 @@ class MainPagesController extends Controller
         ]);
 
         $main = Main::first();
+        
         $main->title = $request->title;
         $main->sub_title = $request->sub_title;
 

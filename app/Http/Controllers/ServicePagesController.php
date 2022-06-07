@@ -42,7 +42,7 @@ class ServicePagesController extends Controller
             'description' => 'required|string',
         ]);
 
-        $services = new service;
+        $services = new Service;
         $services->icon = $request->icon;
         $services->title = $request->title;
         $services->description = $request->description; 
@@ -71,7 +71,7 @@ class ServicePagesController extends Controller
      */
     public function edit($id)
     {
-        $service = service::find($id);
+        $service = Service::find($id);
         return view('pages.services.edit', compact('service'));
     }
 
